@@ -112,9 +112,9 @@ a:active {
   <h1></h1>
 <b>MIKROTIK SCRIPT : GAMES, BROWSING, SOSMED, YOUTUBE</b><br>
 <p><span style="font-size:15px; padding-left:10px">Mikrotik Low Spesifikasi</span></p><br>
-  <div style="border-left: 1px #1C8A53 solid; padding: 10px;background-color:#e6e6e6;
+<div style="background-color: #e6e6e6; border-left: 5px solid #1C8A53; padding: 10px;
 text-align: left;">
-/ip firewall mangle
+/ip firewall mangle<br>
     add action=mark-packet chain=prerouting new-packet-mark=icmp-conn passthrough=no protocol=icmp
     add action=mark-packet chain=forward new-packet-mark=icmp-conn passthrough=no protocol=icmp
     add action=mark-packet chain=prerouting dst-port=53 new-packet-mark=dns-conn passthrough=no protocol=udp
