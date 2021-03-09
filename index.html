@@ -19,6 +19,9 @@
     <meta property="og:url" content="https://dnelfams.github.io">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type='text/css' href="//dnelfams.github.io/style.css">
+    <link rel="stylesheet" href="//dnelfams.github.io/highlightjs/styles/github.css">
+    <script src="//dnelfams.github.io/highlightjs/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     
 </head>
 <body> 
@@ -43,6 +46,24 @@
   <h1></h1>
 <b>MIKROTIK SCRIPT : GAMES, BROWSING, SOSMED, YOUTUBE</b><br>
 <p><span style="font-size:15px; padding-left:10px">Mikrotik Low Spesifikasi</span></p><br>
+ <pre><code class="html"> 
+  /ip firewall mangle
+   add action=mark-packet chain=prerouting new-packet-mark=icmp-conn passthrough=no protocol=icmp
+   add action=mark-packet chain=forward new-packet-mark=icmp-conn passthrough=no protocol=icmp
+   add action=mark-packet chain=prerouting dst-port=53 new-packet-mark=dns-conn passthrough=no protocol=udp
+   add action=mark-packet chain=forward dst-port=53 new-packet-mark=dns-conn passthrough=no protocol=udp
+   add action=mark-connection chain=prerouting dst-port=!21,22,23,5060,81,3478,5228,5938,8000-8081,8777,20561,45395,443,80 new-connection-mark=game-conn packet-size=0-512 protocol=udp src-address-list=Ip-Lan
+   add action=mark-connection chain=prerouting dst-port=!21,22,23,5060,81,843,5222,5223,5228,5938,8000-8081,8291,443,80 new-connection-mark=game-conn packet-size=0-512 protocol=tcp src-address-list=Ip-Lan
+   add action=mark-packet chain=prerouting connection-mark=game-conn new-packet-mark=up-game packet-size=0-512 passthrough=no src-address-list=Ip-Lan
+   add action=mark-packet chain=forward connection-mark=game-conn dst-address-list=Ip-Lan new-packet-mark=down-game packet-size=0-512 passthrough=no
+   add action=mark-connection chain=prerouting connection-mark=!game-conn connection-state=established,related,untracked new-connection-mark=global-conn protocol=!icmp
+   add action=mark-packet chain=prerouting connection-bytes=1-128000 connection-mark=global-conn new-packet-mark=up-small passthrough=no src-address-list=Ip-Lan
+   add action=mark-packet chain=prerouting connection-bytes=128000-512000 connection-mark=global-conn new-packet-mark=up-medium passthrough=no src-address-list=Ip-Lan
+   add action=mark-packet chain=prerouting connection-mark=global-conn new-packet-mark=up-large passthrough=no src-address-list=Ip-Lan
+   add action=mark-packet chain=forward connection-bytes=1-25600 connection-mark=global-conn dst-address-list=Ip-Lan new-packet-mark=down-small passthrough=no
+   add action=mark-packet chain=forward connection-bytes=256000-2000000 connection-mark=global-conn dst-address-list=Ip-Lan new-packet-mark=down-medium passthrough=no
+   add action=mark-packet chain=forward connection-mark=global-conn dst-address-list=Ip-Lan new-packet-mark=down-large passthrough=no
+  </code></pre>
 <!-- adsgoogle
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
