@@ -37,6 +37,31 @@ box-sizing: border-box;
   border:1px solid #ccc;
   background:#fff;
 }
+.pres{
+display: block;
+overflow-x: auto;
+padding: 0.5em;
+color: #333;
+background: #f8f8f8;
+border-left: 5px solid #1C8A53;
+height: 200px;
+overflow: auto;
+width: auto;
+}
+.pres code {
+color: #BFBF90; /* warna huruf */
+font-size: 12px; /* ukuran huruf */ 
+max-height:250px;
+line-height:1.5em;
+display:block;
+background:none;
+border:none;
+padding:10px 15px;
+font-family:'source code pro',menlo,consolas,monaco,monospace;
+white-space:pre-wrap;
+overflow:auto;
+user-select:text;
+}
 .left
 { text-align: left;
 }
