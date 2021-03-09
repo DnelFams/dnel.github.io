@@ -46,7 +46,7 @@
   <h1></h1>
 <b>MIKROTIK SCRIPT : GAMES, BROWSING, SOSMED, YOUTUBE</b><br>
 <p><span style="font-size:15px; padding-left:10px">Mikrotik Low Spesifikasi</span></p><br>
- <pre><code class="html"> 
+ <pre><code>
   /ip firewall mangle
    add action=mark-packet chain=prerouting new-packet-mark=icmp-conn passthrough=no protocol=icmp
    add action=mark-packet chain=forward new-packet-mark=icmp-conn passthrough=no protocol=icmp
