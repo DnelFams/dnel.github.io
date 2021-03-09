@@ -1,11 +1,34 @@
 body {font-size:14px; background-color:#ddd;color: #222; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" }
 h1, h2, h3, h4, h5, h6{font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";font-size: 25px; border-bottom:1px solid #ccc; margin-bottom:25px}
 pre {
+display: block;
+overflow-x: auto;
+padding: 0.5em;
+color: #333;
+background: #f8f8f8;
+border-left: 5px solid #1C8A53;
+height: 200px;
+overflow: auto;
+width: auto;
 white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
 white-space: -pre-wrap; /* Opera */
 white-space: -o-pre-wrap; /* Opera */
 white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
 word-wrap: break-word; /* IE 5.5+ */
+}
+pre code {
+color: #BFBF90; /* warna huruf */
+font-size: 12px; /* ukuran huruf */ 
+max-height:250px;
+line-height:1.5em;
+display:block;
+background:none;
+border:none;
+padding:10px 15px;
+font-family:'source code pro',menlo,consolas,monaco,monospace;
+white-space:pre-wrap;
+overflow:auto;
+user-select:text;
 }
 b{font-size:18px}
 p {
