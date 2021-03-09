@@ -19,97 +19,7 @@
     <meta property="og:url" content="https://dnelfams.github.io">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type='text/css' href="//dnelfams.github.io/style.css">
-    <style id='page-skin-1' type='text/css'>
-pre code {
-  display: block; padding: 0.5em;
-  background: #f8f8f8; color: #333;
-  border-left: 5px solid #1C8A53;
-  height: 200px; overflow: auto;
-  width: auto;
-}
-
-pre .comment,
-pre .template_comment,
-pre .diff .header,
-pre .doctype,
-pre .pi,
-pre .lisp .string,
-pre .javadoc {
-  color: #998;
-  font-style: italic;
-}
-
-pre .keyword,
-pre .winutils,
-pre .method,
-pre .addition,
-pre .css .tag,
-pre .request,
-pre .status,
-pre .nginx .title {
-  color: #333;
-}
-
-pre .number,
-pre .command,
-pre .string,
-pre .tag .value,
-pre .rules .value,
-pre .phpdoc,
-pre .tex .formula,
-pre .regexp,
-pre .hexcolor {
-  color: #008080;
-}
-
-pre .title,
-pre .localvars,
-pre .chunk,
-pre .decorator,
-pre .built_in,
-pre .identifier,
-pre .vhdl .literal,
-pre .id,
-pre .css .function {
-  color: #900;
-}
-
-pre .attribute,
-pre .variable,
-pre .lisp .body,
-pre .smalltalk .number,
-pre .constant,
-pre .class .title,
-pre .parent,
-pre .haskell .type {
-  color: #b58900;
-}
-
-pre .preprocessor,
-pre .preprocessor .keyword,
-pre .pragma,
-pre .shebang,
-pre .symbol,
-pre .symbol .string,
-pre .diff .change,
-pre .special,
-pre .attr_selector,
-pre .important,
-pre .subst,
-pre .cdata,
-pre .clojure .title,
-pre .css .pseudo {
-  color: #cb4b16;
-}
-
-pre .deletion {
-  color: #dc322f;
-}
-
-pre .tex .formula {
-  background: #073642;
-}
-</style>
+    
 </head>
 <body> 
 <div class="content">
@@ -133,25 +43,6 @@ pre .tex .formula {
   <h1></h1>
 <b>MIKROTIK SCRIPT : GAMES, BROWSING, SOSMED, YOUTUBE</b><br>
 <p><span style="font-size:15px; padding-left:10px">Mikrotik Low Spesifikasi</span></p><br>
-<pre><code>
-/ip firewall mangle
-   add action=mark-packet chain=prerouting new-packet-mark=icmp-conn passthrough=no protocol=icmp
-   add action=mark-packet chain=forward new-packet-mark=icmp-conn passthrough=no protocol=icmp
-   add action=mark-packet chain=prerouting dst-port=53 new-packet-mark=dns-conn passthrough=no protocol=udp
-   add action=mark-packet chain=forward dst-port=53 new-packet-mark=dns-conn passthrough=no protocol=udp
-   add action=mark-connection chain=prerouting dst-port=!21,22,23,5060,81,3478,5228,5938,8000-8081,8777,20561,45395,443,80 new-connection-mark=game-conn packet-size=0-512 protocol=udp src-address-list=Ip-Lan
-   add action=mark-connection chain=prerouting dst-port=!21,22,23,5060,81,843,5222,5223,5228,5938,8000-8081,8291,443,80 new-connection-mark=game-conn packet-size=0-512 protocol=tcp src-address-list=Ip-Lan
-   add action=mark-packet chain=prerouting connection-mark=game-conn new-packet-mark=up-game packet-size=0-512 passthrough=no src-address-list=Ip-Lan
-   add action=mark-packet chain=forward connection-mark=game-conn dst-address-list=Ip-Lan new-packet-mark=down-game packet-size=0-512 passthrough=no
-   add action=mark-connection chain=prerouting connection-mark=!game-conn connection-state=established,related,untracked new-connection-mark=global-conn protocol=!icmp
-   add action=mark-packet chain=prerouting connection-bytes=1-128000 connection-mark=global-conn new-packet-mark=up-small passthrough=no src-address-list=Ip-Lan
-   add action=mark-packet chain=prerouting connection-bytes=128000-512000 connection-mark=global-conn new-packet-mark=up-medium passthrough=no src-address-list=Ip-Lan
-   add action=mark-packet chain=prerouting connection-mark=global-conn new-packet-mark=up-large passthrough=no src-address-list=Ip-Lan
-   add action=mark-packet chain=forward connection-bytes=1-25600 connection-mark=global-conn dst-address-list=Ip-Lan new-packet-mark=down-small passthrough=no
-   add action=mark-packet chain=forward connection-bytes=256000-2000000 connection-mark=global-conn dst-address-list=Ip-Lan new-packet-mark=down-medium passthrough=no
-   add action=mark-packet chain=forward connection-mark=global-conn dst-address-list=Ip-Lan new-packet-mark=down-large passthrough=no
-</code>
-</pre>
 <!-- adsgoogle
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
