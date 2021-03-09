@@ -19,7 +19,7 @@
     <meta property="og:url" content="https://dnelfams.github.io">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type='text/css' href="/style.css">
-    <link rel="stylesheet" href="/highlightjs/styles/default.css">
+    <link rel="stylesheet" type='text/css' href="/highlightjs/styles/default.css">
     <script src="/highlightjs/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     
@@ -46,7 +46,7 @@
   <h1></h1>
 <b>MIKROTIK SCRIPT : GAMES, BROWSING, SOSMED, YOUTUBE</b><br>
 <p><span style="font-size:15px; padding-left:10px">Mikrotik Low Spesifikasi</span></p><br>
-<pre><code class="html">/ip firewall mangle
+<pre><code class="css">/ip firewall mangle
    add action=mark-packet chain=prerouting new-packet-mark=icmp-conn passthrough=no protocol=icmp
    add action=mark-packet chain=forward new-packet-mark=icmp-conn passthrough=no protocol=icmp
    add action=mark-packet chain=prerouting dst-port=53 new-packet-mark=dns-conn passthrough=no protocol=udp
