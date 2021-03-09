@@ -18,6 +18,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dnelfams.github.io">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type='text/css' href="/style.css">
+    <style id='page-skin-1' type='text/css'>
+a:link {color: #08c;  text-decoration:none}
+a:visited {color: #08c;  text-decoration:none}
+a:hover {color: black;}
+a:active {color: #08c;}      
+body {font-size:13px;background-color:#fff;color: #222; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" }
+h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:20px; color:#ff6600}
+pre {
+    white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
+    white-space: -pre-wrap; /* Opera */
+    white-space: -o-pre-wrap; /* Opera */
+    white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
+    word-wrap: break-word; /* IE 5.5+ */
+}  
+</style>   
     <link rel="stylesheet" href="/highlightjs/styles/default.css">
     <script src="/highlightjs/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
@@ -45,7 +61,7 @@
   <h1></h1>
 <b>MIKROTIK SCRIPT : GAMES, BROWSING, SOSMED, YOUTUBE</b><br>
 <p><span style="font-size:15px; padding-left:10px">Mikrotik Low Spesifikasi</span></p><br>
-<pre><code class="css">/ip firewall mangle
+<pre><code class="routeros">/ip firewall mangle
    add action=mark-packet chain=prerouting new-packet-mark=icmp-conn passthrough=no protocol=icmp
    add action=mark-packet chain=forward new-packet-mark=icmp-conn passthrough=no protocol=icmp
    add action=mark-packet chain=prerouting dst-port=53 new-packet-mark=dns-conn passthrough=no protocol=udp
