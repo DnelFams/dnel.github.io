@@ -43,7 +43,7 @@
   <h1></h1>
 <b>MIKROTIK SCRIPT : GAMES, BROWSING, SOSMED, YOUTUBE</b><br>
 <p><span style="font-size:15px; padding-left:10px">Mikrotik Low Spesifikasi</span></p><br>
-<pre><code class="routeros">/ip firewall mangle
+<pres><code>/ip firewall mangle
    add action=mark-packet chain=prerouting new-packet-mark=icmp-conn passthrough=no protocol=icmp
    add action=mark-packet chain=forward new-packet-mark=icmp-conn passthrough=no protocol=icmp
    add action=mark-packet chain=prerouting dst-port=53 new-packet-mark=dns-conn passthrough=no protocol=udp
@@ -59,7 +59,7 @@
    add action=mark-packet chain=forward connection-bytes=1-25600 connection-mark=global-conn dst-address-list=Ip-Lan new-packet-mark=down-small passthrough=no
    add action=mark-packet chain=forward connection-bytes=256000-2000000 connection-mark=global-conn dst-address-list=Ip-Lan new-packet-mark=down-medium passthrough=no
    add action=mark-packet chain=forward connection-mark=global-conn dst-address-list=Ip-Lan new-packet-mark=down-large passthrough=no
-  </code></pre>
+  </code></pres>
 <!-- adsgoogle
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
