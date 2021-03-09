@@ -45,7 +45,7 @@
   <h1></h1>
 <b>MIKROTIK SCRIPT : GAMES, BROWSING, SOSMED, YOUTUBE</b><br>
 <p><span style="font-size:15px; padding-left:10px">Mikrotik Low Spesifikasi</span></p><br>
-<pre><code>/ip firewall mangle
+<pre><code class="css">/ip firewall mangle
    add action=mark-packet chain=prerouting new-packet-mark=icmp-conn passthrough=no protocol=icmp
    add action=mark-packet chain=forward new-packet-mark=icmp-conn passthrough=no protocol=icmp
    add action=mark-packet chain=prerouting dst-port=53 new-packet-mark=dns-conn passthrough=no protocol=udp
@@ -79,5 +79,12 @@
 Copyright 2021 <a href="#">Dnelfams</a> Powered by <a href="https://pages.github.com/">GitHub Pages</a>  
 </div> 
 </div>
+  <script>
+document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('pre code').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
 </body>
 </html>
