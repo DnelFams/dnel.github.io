@@ -1,33 +1,33 @@
 body {font-size:14px; background-color:#ddd;color: #222; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" }
 h1, h2, h3, h4, h5, h6{font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";font-size: 25px; border-bottom:1px solid #ccc; margin-bottom:25px}
 pre {
-white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
-white-space: -pre-wrap; /* Opera */
-white-space: -o-pre-wrap; /* Opera */
-white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
-word-wrap: break-word; /* IE 5.5+ */
+  white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
+  white-space: -pre-wrap; /* Opera */
+  white-space: -o-pre-wrap; /* Opera */
+  white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
+  word-wrap: break-word; /* IE 5.5+ */
 }
 b {
-font-size:18px
+  font-size:18px
 }
 p {
-padding:0;
-margin:7px 7px 0 17px;
-display:list-item;
-list-style: square;
+  padding:0;
+  margin:7px 7px 0 17px;
+  display:list-item;
+  list-style: square;
 }
-.logo {
-padding-top:10px;
-padding-bottom:20px;
-margin-bottom:20px;
-color: #111;
-text-decoration:none;
-font-size:30px;
-font-weight:bold; 
-border-bottom:1px solid #ccc;
+ .logo {
+  padding-top:10px;
+  padding-bottom:20px;
+  margin-bottom:20px;
+  color: #111;
+  text-decoration:none;
+  font-size:30px;
+  font-weight:bold; 
+  border-bottom:1px solid #ccc;
 }	
-.logo a{
-color:#111 !important;
+ .logo a{
+  color:#111 !important;
 }
 * {
 box-sizing: border-box;
@@ -39,14 +39,37 @@ box-sizing: border-box;
   border:1px solid #ccc;
   background:#fff;
 }
-.left
-{ text-align: left;
+ .scrp{
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+  border-left: 5px solid #1C8A53;
+  height: 200px;
+  overflow: auto;
+  width: auto;
 }
-.right
-{ text-align: right;
+ .scrp code {
+  color: #333; /* warna huruf */
+  font-size: 12px; /* ukuran huruf */ 
+  line-height:1.5em;
+  display:block;
+  background:none;
+  border:none;
+  padding:10px 15px;
+  font-family:'source code pro',menlo,consolas,monaco,monospace;
+  white-space:pre-wrap;
+  overflow:auto;
 }
-.center
-{ text-align: center;
+ .left {
+  text-align: left;
+}
+ .right {
+  text-align: right;
+}
+ .center {
+ text-align: center;
 }
 /* unvisited link */
 a:link {
