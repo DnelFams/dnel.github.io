@@ -19,6 +19,9 @@
     <meta property="og:url" content="https://dnelfams.github.io">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type='text/css' href="/style.css">
+    <link rel="stylesheet" href="/highlightjs/styles/routeros.css">
+    <script src="/highlightjs/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     
 </head>
 <body> 
@@ -43,7 +46,7 @@
   <h1></h1>
 <b>MIKROTIK SCRIPT : GAMES, BROWSING, SOSMED, YOUTUBE</b><br>
 <p><span style="font-size:15px; padding-left:10px">Mikrotik Low Spesifikasi</span></p><br>
-<div class="scrp"><code># Paste script to terminal
+<presc class="routeros"><code># Paste script to terminal
 /ip firewall mangle
 add action=mark-packet chain=prerouting new-packet-mark=icmp-conn passthrough=no protocol=icmp
 add action=mark-packet chain=forward new-packet-mark=icmp-conn passthrough=no protocol=icmp
@@ -61,7 +64,7 @@ add action=mark-packet chain=forward connection-bytes=1-25600 connection-mark=gl
 add action=mark-packet chain=forward connection-bytes=256000-2000000 connection-mark=global-conn dst-address-list=Ip-Lan new-packet-mark=down-medium passthrough=no
 add action=mark-packet chain=forward connection-mark=global-conn dst-address-list=Ip-Lan new-packet-mark=down-large passthrough=no
 </code>
-</div>
+</presc>
 <!-- adsgoogle
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
