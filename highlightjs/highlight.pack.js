@@ -262,8 +262,8 @@ language:a.language,re:a.relevance,relavance:a.relevance
 re:a.second_best.relevance,relavance:a.second_best.relevance})}const v=()=>{
 v.called||(v.called=!0,
 $("10.6.0","initHighlighting() is deprecated.  Use highlightAll() instead."),
-document.querySelectorAll("pre code").forEach(E))};let w=!1,N=!1;function y(){
-N?document.querySelectorAll("pre code").forEach(E):w=!0}function _(e){
+document.querySelectorAll("presc code").forEach(E))};let w=!1,N=!1;function y(){
+N?document.querySelectorAll("presc code").forEach(E):w=!0}function _(e){
 return e=(e||"").toLowerCase(),n[e]||n[r[e]]}function k(e,{languageName:t}){
 "string"==typeof e&&(e=[e]),e.forEach((e=>{r[e]=t}))}function O(e){const t=_(e)
 ;return t&&!t.disableAutodetect}function M(e,t){const n=e;a.forEach((e=>{
