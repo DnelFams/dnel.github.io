@@ -39,29 +39,6 @@ box-sizing: border-box;
   border:1px solid #ccc;
   background:#fff;
 }
-.scrp{
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  color: #333;
-  background: #f8f8f8;
-  border-left: 5px solid #1C8A53;
-  height: 200px;
-  overflow: auto;
-  width: auto;
-}
-.scrp code {
-  color: #333; /* warna huruf */
-  font-size: 12px; /* ukuran huruf */ 
-  line-height:1.5em;
-  display:block;
-  background:none;
-  border:none;
-  padding:10px 15px;
-  font-family:'source code pro',menlo,consolas,monaco,monospace;
-  white-space:pre-wrap;
-  overflow:auto;
-}
 .left
 { text-align: left;
 }
