@@ -40,6 +40,8 @@ box-sizing: border-box;
   background:#fff;
 }
  .scrp{
+  margin-left: auto;
+  margin-right: auto;
   display: block;
   overflow-x: auto;
   padding: 0.5em;
