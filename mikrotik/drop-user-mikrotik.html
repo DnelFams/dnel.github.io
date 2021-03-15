@@ -50,7 +50,21 @@ add action=drop chain=dnel-disable-time dst-port=80,443 protocol=tcp src-address
 add action=return chain=dnel-disable-time
 </code>
 </div><br>
-<img src="/img/IP-Firewall-Filter Rules-.png" alt="Drop User Mikrotik" title="Drop User Mikrotik" style="max-width: 100%; height: auto;">
+  <img class="center" src="/img/IP-Firewall-Filter Rules-.png" alt="Drop User Mikrotik" title="Drop User Mikrotik" style="max-width: 100%; height: auto;"><br>
+<p><span style="font-size:15px; padding-left:10px">IP->Hotspot->User Profile</span></p><br>
+<div class="scrp"><code># Paste script to terminal
+/ip hotspot user profile
+add address-list=Ip-Limit name=UserLimit rate-limit="512k/2M 0/0 0/0 0/0 8 56k/128k"
+</code>
+</div><br>
+  <img class="center" src="/img/IP-Hotspot-User Profil.png" alt="Drop User Mikrotik" title="Drop User Mikrotik" style="max-width: 100%; height: auto;"><br>
+<p><span style="font-size:15px; padding-left:10px">IP->Hotspot->User</span></p><br>
+<div class="scrp"><code># Paste script to terminal
+/ip hotspot user
+add name=dnel password=dnel profile=UserLimit
+</code>
+</div><br>
+  <img class="center" src="/img/IP-Hotspot-User.png" alt="Drop User Mikrotik" title="Drop User Mikrotik" style="max-width: 100%; height: auto;"><br>
 <!-- adsgoogle
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
