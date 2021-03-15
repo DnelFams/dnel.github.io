@@ -14,7 +14,7 @@ p {
   padding:0;
   margin:7px 7px 0 17px;
   display:list-item;
-  list-style: square;
+  list-style: circle;
 }
  .logo {
   padding-top:10px;
@@ -46,7 +46,7 @@ box-sizing: border-box;
   color: #333;
   background: #f8f8f8;
   border-left: 5px solid #1C8A53;
-  height: 200px;
+  height: 100%;
   overflow: auto;
   width: auto;
 }
