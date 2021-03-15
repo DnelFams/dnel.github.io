@@ -48,7 +48,7 @@ box-sizing: border-box;
   border-left: 5px solid #1C8A53;
   height: 100%;
   overflow: auto;
-  width: auto;
+  max-width: 95%;
 }
  .scrp code {
   color: #333; /* warna huruf */
