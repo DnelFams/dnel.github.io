@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DNEL Mikrotik Script</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content='DNEL Mikrotik Script' name='description'/>
+    <meta content='setting mikrotik, mikrotik, router, winbox, script, hotspot, rtrwnet' name='keywords'/>
+    <meta http-equiv="expires" content="0">
+    <meta content='index, follow, noodp' name='robots'/>
+    <link href='https://dnelfams.github.io' rel='canonical'/>
+    <meta name="google-site-verification" content="npSELMKu-t3HfVYIOSAqauB1Tq9kp2FYJcta0lVXxs0" />
+    <meta property="og:title" content="DNELFAMS">
+    <meta property="og:description" content="DNEL Mikrotik Script">
+    <meta property="og:image" content="xxxx">
+    <meta property="og:image:alt" content="DNEL Mikrotik Script">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dnelfams.github.io">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type='text/css' href="/style.css">
+    
+</head>
+<body> 
+<div class="content">
+<center>
+<div class="logo">	  
+<a href="https://dnelfams.github.io"><span style="color:#1C8A53 !important">DNELᶠᵃᵐˢ</span></a> <img style="margin-left:15px" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdnelfams.github.io&count_bg=%231C8A53&title_bg=%23555555&icon=&icon_color=%23FFFFFF&title=hits&edge_flat=false" alt="Hits"/>
+</div>	
+</center> 
+<!-- adsgoogle
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-xxxxx"
+     data-ad-slot="000000000"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>  -->
+  <h1></h1>
+<b>MIKROTIK SCRIPT : Blok Ip User atau User Profile Pada Jam Tertentu</b><br>
+<p><span style="font-size:15px; padding-left:10px">IP->Firewal->Filter Rules</span></p><br>
+<div class="scrp"><code># Paste script to terminal
+/ip firewall filter
+add action=jump chain=forward comment="drop jam tertentu Copyright Script by DNEL" jump-target=dnel-disable-time src-address-list=Ip-Limit time=10h30m-12h,sun,mon,tue,wed,thu,fri,sat
+add action=drop chain=dnel-disable-time dst-port=80,443 protocol=udp src-address-list=Ip-Limit
+add action=drop chain=dnel-disable-time dst-port=80,443 protocol=tcp src-address-list=Ip-Limit
+add action=return chain=dnel-disable-time
+</code>
+</div>
+<!-- adsgoogle
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="xxxxx"
+     data-ad-slot="000000000"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> -->
+<h1></h1>
+<div class="right" style="font-size:13px;margin-bottom:10px">
+Copyright 2021 <a href="#">Dnelfams</a> Powered by <a href="https://pages.github.com/">GitHub Pages</a>  
+</div> 
+</div>
+</body>
+</html>
