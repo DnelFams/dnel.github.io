@@ -70,6 +70,10 @@ box-sizing: border-box;
 }
  .center {
  text-align: center;
+ margin-left: auto;
+ margin-right: auto;
+ display:block;
+ max-width:85%
 }
 /* unvisited link */
 a:link {
