@@ -36,26 +36,26 @@
 <p><span style="font-size:15px; padding-left:10px">IP->Firewal->Filter Rules</span></p><br>
 <div class="scrp"><code># Paste script to terminal
 /ip firewall filter
-add action=jump chain=forward comment="drop jam tertentu Copyright Script by DNEL" jump-target=dnel-disable-time src-address-list=Ip-Limit time=10h30m-12h,sun,mon,tue,wed,thu,fri,sat
+add action=jump chain=forward comment="Auto Block Jam Tertentu Copyright Script by DNEL" jump-target=dnel-disable-time src-address-list=Ip-Limit time=10h30m-12h,sun,mon,tue,wed,thu,fri,sat
 add action=drop chain=dnel-disable-time dst-port=80,443 protocol=udp src-address-list=Ip-Limit
 add action=drop chain=dnel-disable-time dst-port=80,443 protocol=tcp src-address-list=Ip-Limit
 </code>
 </div><br>
-  <img class="center" src="/img/IP-Firewall-Filter Rules.png" alt="Drop User Mikrotik" title="Drop User Mikrotik"><br>
+  <img class="center" src="/img/IP-Firewall-Filter Rules.png" alt="Auto Block Ip User Pada Jam Tertentu" title="Auto Block Ip User Pada Jam Tertentu"><br>
 <p><span style="font-size:15px; padding-left:10px">IP->Hotspot->User Profile</span></p><br>
 <div class="scrp"><code># Paste script to terminal
 /ip hotspot user profile
 add address-list=Ip-Limit name=UserLimit rate-limit="512k/2M 0/0 0/0 0/0 8 56k/128k"
 </code>
 </div><br>
-  <img class="center" src="/img/IP-Hotspot-User Profil.png" alt="Drop User Mikrotik" title="Drop User Mikrotik"><br>
+  <img class="center" src="/img/IP-Hotspot-User Profil.png" alt="Auto Block Ip User Pada Jam Tertentu" title="Auto Block Ip User Pada Jam Tertentu"><br>
 <p><span style="font-size:15px; padding-left:10px">IP->Hotspot->User</span></p><br>
 <div class="scrp"><code># Paste script to terminal
 /ip hotspot user
 add name=dnel password=dnel profile=UserLimit
 </code>
 </div><br>
-  <img class="center" src="/img/IP-Hotspot-User.png" alt="Drop User Mikrotik" title="Drop User Mikrotik"><br>
+  <img class="center" src="/img/IP-Hotspot-User.png" alt="Auto Block Ip User Pada Jam Tertentu" title="Auto Block Ip User Pada Jam Tertentu"><br>
 <!-- adsgoogle
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
