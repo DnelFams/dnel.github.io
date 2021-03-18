@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DNEL Mikrotik Script</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content='DNEL Mikrotik Script' name='description'/>
+    <meta content='setting mikrotik, mikrotik, router, winbox, script, hotspot, rtrwnet' name='keywords'/>
+    <meta http-equiv="expires" content="0">
+    <meta content='index, follow, noodp' name='robots'/>
+    <link href='https://dnelfams.github.io' rel='canonical'/>
+    <meta name="google-site-verification" content="npSELMKu-t3HfVYIOSAqauB1Tq9kp2FYJcta0lVXxs0" />
+    <meta property="og:title" content="DNELFAMS">
+    <meta property="og:description" content="DNEL Mikrotik Script">
+    <meta property="og:image" content="xxxx">
+    <meta property="og:image:alt" content="DNEL Mikrotik Script">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dnelfams.github.io">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type='text/css' href="/style.css">
+    
+</head>
+<body> 
+<div class="content">
+<center>
+<div class="logo">	  
+<a href="https://dnelfams.github.io"><span style="color:#1C8A53 !important">DNELᶠᵃᵐˢ</span></a> <img style="margin-left:15px" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdnelfams.github.io&count_bg=%231C8A53&title_bg=%23555555&icon=&icon_color=%23FFFFFF&title=hits&edge_flat=false" alt="Hits"/>
+</div>	
+</center> 
+<!-- adsgoogle
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-xxxxx"
+     data-ad-slot="000000000"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>  -->
+  <h1></h1>
+<b>MIKROTIK SCRIPT : GAMES, BROWSING, SOSMED, YOUTUBE</b><br>
+<p><span style="font-size:15px; padding-left:10px">Mikrotik Low Spesifikasi</span></p><br>
+<div class="scrp"><code># Paste script to terminal
+/ip firewall mangle
+add action=mark-packet chain=prerouting new-packet-mark=icmp-conn passthrough=no protocol=icmp
+add action=mark-packet chain=forward new-packet-mark=icmp-conn passthrough=no protocol=icmp
+add action=mark-packet chain=prerouting dst-port=53 new-packet-mark=dns-conn passthrough=no protocol=udp
+add action=mark-packet chain=forward dst-port=53 new-packet-mark=dns-conn passthrough=no protocol=udp
+add action=mark-connection chain=prerouting dst-port=!21,22,23,5060,81,3478,5228,5938,8000-8081,8777,20561,45395,443,80 new-connection-mark=game-conn packet-size=0-512 protocol=udp src-address-list=Ip-Lan
+add action=mark-connection chain=prerouting dst-port=!21,22,23,5060,81,843,5222,5223,5228,5938,8000-8081,8291,443,80 new-connection-mark=game-conn packet-size=0-512 protocol=tcp src-address-list=Ip-Lan
+add action=mark-packet chain=prerouting connection-mark=game-conn new-packet-mark=up-game packet-size=0-512 passthrough=no src-address-list=Ip-Lan
+add action=mark-packet chain=forward connection-mark=game-conn dst-address-list=Ip-Lan new-packet-mark=down-game packet-size=0-512 passthrough=no
+add action=mark-connection chain=prerouting connection-mark=!game-conn connection-state=established,related,untracked new-connection-mark=global-conn protocol=!icmp
+add action=mark-packet chain=prerouting connection-bytes=1-128000 connection-mark=global-conn new-packet-mark=up-small passthrough=no src-address-list=Ip-Lan
+add action=mark-packet chain=prerouting connection-bytes=128000-512000 connection-mark=global-conn new-packet-mark=up-medium passthrough=no src-address-list=Ip-Lan
+add action=mark-packet chain=prerouting connection-mark=global-conn new-packet-mark=up-large passthrough=no src-address-list=Ip-Lan
+add action=mark-packet chain=forward connection-bytes=1-25600 connection-mark=global-conn dst-address-list=Ip-Lan new-packet-mark=down-small passthrough=no
+add action=mark-packet chain=forward connection-bytes=256000-2000000 connection-mark=global-conn dst-address-list=Ip-Lan new-packet-mark=down-medium passthrough=no
+add action=mark-packet chain=forward connection-mark=global-conn dst-address-list=Ip-Lan new-packet-mark=down-large passthrough=no
+</code>
+</div>
+<!-- adsgoogle
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="xxxxx"
+     data-ad-slot="000000000"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> -->
+<h1></h1>
+<div class="right" style="font-size:13px;margin-bottom:10px">
+Copyright 2021 <a href="#">Dnelfams</a> Powered by <a href="https://pages.github.com/">GitHub Pages</a>  
+</div> 
+</div>
+</body>
+</html>
