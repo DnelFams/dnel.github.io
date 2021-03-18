@@ -81,7 +81,7 @@ p {
 
 /* Right column (menu) */
 .tabmenu {
-  flex: 30%;
+  flex: 25%;
   padding: 15px 0;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
@@ -97,7 +97,7 @@ p {
 
 /* Left column (page content) */
 .tabcontent {
-  flex: 70%;
+  flex: 75%;
   padding: 15px 40px;
   border: 1px solid #ccc;
   background-color:#fff;
@@ -216,7 +216,7 @@ p {
 <p><span style="font-size:15px; padding-left:10px">IP->Firewal->Filter Rules</span></p>
 <scrp><code># Paste script to terminal
 /ip firewall filter
-add action=jump chain=forward comment="Auto Block Jam Tertentu Copyright Script by DNEL" jump-target=dnel-disable-time src-address-list=Ip-Limit time=10h30m-12h,sun,mon,tue,wed,thu,fri,sat
+add action=jump chain=forward comment="Auto Block Jam Tertentu Copyscript by DNEL" jump-target=dnel-disable-time src-address-list=Ip-Limit time=10h30m-12h,sun,mon,tue,wed,thu,fri,sat
 add action=drop chain=dnel-disable-time dst-port=80,443 protocol=udp src-address-list=Ip-Limit
 add action=drop chain=dnel-disable-time dst-port=80,443 protocol=tcp src-address-list=Ip-Limit
 </code>
