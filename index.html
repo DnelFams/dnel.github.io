@@ -13,7 +13,7 @@
     <meta name="google-site-verification" content="npSELMKu-t3HfVYIOSAqauB1Tq9kp2FYJcta0lVXxs0" />
     <meta property="og:title" content="DNELFAMS">
     <meta property="og:description" content="DNEL Mikrotik Script">
-    <meta property="og:image" content="xxxx">
+    <meta property="og:image" content="https://dnelfams.github.io/img/dnelfams.png">
     <meta property="og:image:alt" content="DNEL Mikrotik Script">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dnelfams.github.io">
@@ -26,13 +26,6 @@ body {
   margin: 0px;
   font-size:14px;
   font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-p {
-  padding:0;
-  margin:7px 7px 10px 17px;
-  display:list-item;
-  list-style: circle;
 }
 
 /* Header Left */
@@ -72,9 +65,9 @@ p {
 
 .header-right {
   float: right;
-}
+} 
 
-.header-right t1 {
+.header-right r.text {
   padding-left: 21px;
   font-size: 14px;
   font-weight: bold;
@@ -118,6 +111,26 @@ p {
   text-align: center;
 }
 
+.tabcontent t1 {
+  padding:0;
+  margin:7px 7px 10px 17px;
+  display:list-item;
+  list-style: circle;
+}
+
+.tabcontent t2 {
+  color: #333;
+  font-size: 12px;
+  line-height:1.5em;
+  display:block;
+  background:none;
+  border:none;
+  padding:10px 15px;
+  font-family:'source code pro',menlo,consolas,monaco,monospace;
+  white-space:pre-wrap;
+  overflow:auto;
+}
+
 /* Script Box */
  .tabcontent scrp{
   margin-left: auto;
@@ -132,9 +145,10 @@ p {
   overflow: auto;
   max-width: 95%;
 }
+
  .tabcontent scrp code {
-  color: #333; /* warna huruf */
-  font-size: 12px; /* ukuran huruf */ 
+  color: #333;
+  font-size: 12px;
   line-height:1.5em;
   display:block;
   background:none;
@@ -197,7 +211,7 @@ p {
 <div class="header">
   <a href="https://dnelfams.github.io/" class="logo">DNELᶠᵃᵐˢ</a>
   <div class="header-right">
-   <t1>Free Mikrotik Script</t1>
+   <r class="text">Free Mikrotik Script</r>
    <img style="margin:0px 20px 0px 21px" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdnelfams.github.io&count_bg=%231C8A53&title_bg=%23555555&icon=&icon_color=%23FFFFFF&title=hits&edge_flat=false" alt="Hits"/>
   </div>
 </div>
@@ -219,7 +233,16 @@ p {
   </div>
   
   <div class="tabcontent">
-    <h1><span style="color:#1C8A53 !important">WELCOME MIKROKERS</span></h1>
+    <h2><span style="color:#1C8A53 !important">WELCOME MIKROKERS</span></h2>
+    <t1>Mengenal Costum Chain Pada Mikrotik</t1>
+    <t2>* Forward – Digunakan untuk memproses trafik paket data yang hanya melewati router.
+* Input – Digunakan untuk memproses trafik  paket data yang masuk ke dalam router melalui interface yang ada di router.
+* Output – Digunakan untuk memproses trafik paket data yang keluar dari router.
+* Prerouting – Digunakan untuk memproses trafik paket data yang masuk kedalam router dan melewati router.
+* Postrouting – Digunakan untuk memproses trafik paket data yang akan keluar dari router.
+* Action Jump – Berfungsi untuk melompat ke chain lain yang telah didefiniskan pada paramater jump-target.
+* Action Return – Berfungsi untuk memproses kembali aturan yang kita buat.
+    </t2>
   
 </div>
 </div>
